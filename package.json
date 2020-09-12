@@ -1,0 +1,21 @@
+{
+  "name": "svdocs",
+  "version": "1.0.0",
+  "description": "spereverde docs",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "docs",
+    "markdown",
+    "11ty"
+  ],
+  "author": "Kim Paulissen",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0"
+  }
+}
