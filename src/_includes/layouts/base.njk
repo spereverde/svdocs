@@ -11,7 +11,9 @@
             <ul>
               {%- for post in collections.all -%}
               <li>
-                <a class="link-dark" href="{{ post.url }}">{{ post.url }}</a>
+                <a class="link-dark" href="{{ post.url }}">{{
+                  post.data.title
+                }}</a>
               </li>
               {%- endfor -%}
             </ul>
