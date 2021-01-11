@@ -4,10 +4,11 @@
 
   <body>
     <div class="l-page">
-      {% include 'layouts/kuleuven/header.njk' %} {% include
-      'layouts/kuleuven/local-header.njk' %}
-      <!-- <div class="jumbotron ...">...</div> (optional) -->
-
+      {% include 'layouts/kuleuven/header.njk' %}
+      {% include 'layouts/kuleuven/local-header.njk' %}
+      {% block banner %}{% endblock %}
+      
+      {% block main %}
       <div role="main">
         <div class="container">
           <h1>{{ title }}</h1>
@@ -15,9 +16,10 @@
           {{ content | safe }}
         </div>
       </div>
+      {% endblock %}
 
-      {% include 'layouts/kuleuven/local-footer.njk' %} {% include
-      'layouts/kuleuven/footer.njk' %}
+      {% include 'layouts/kuleuven/local-footer.njk' %}
+      {% include 'layouts/kuleuven/footer.njk' %}
     </div>
     <!-- Latest compiled and minified JS -->
     <script src="https://stijl.kuleuven.be/releases/latest/js/all.min.js"></script>

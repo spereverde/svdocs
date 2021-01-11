@@ -1,25 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  {% include 'layouts/kuleuven/head.njk' %}
+{% extends "layouts/kuleuven/base.njk" %}
 
-  <body>
-    <div class="l-page">
-      {% include 'layouts/kuleuven/header.njk' %} {% include
-      'layouts/kuleuven/local-header.njk' %} {% include
-      'layouts/kuleuven/jumbotron.njk' %}
-
-      <div role="main">
-        <div class="container">
-          <h1>{{ title }}</h1>
-
-          {{ content | safe }}
-        </div>
-      </div>
-
-      {% include 'layouts/kuleuven/local-footer.njk' %} {% include
-      'layouts/kuleuven/footer.njk' %}
-    </div>
-    <!-- Latest compiled and minified JS -->
-    <script src="https://stijl.kuleuven.be/releases/latest/js/all.min.js"></script>
-  </body>
-</html>
+{% block banner %}
+  {% include 'layouts/kuleuven/parts/jumbotron.njk' %}
+{% endblock %}
