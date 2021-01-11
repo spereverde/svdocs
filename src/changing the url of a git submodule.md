@@ -16,7 +16,7 @@ tag: ["git"]
   - `git clone $your_repo_git_url`
 - edit the `.gitmodules` file: update the url to the new git url of the submodule:
 
-```
+```cfg
 [submodule “$submodule_name”]
         path = common_buildout
         url = $new_git_url_of_submodule
@@ -37,7 +37,7 @@ tag: ["git"]
 
 - Makefile:
 
-```
+```make
 setup:
         git submodule update --init --remote $submodule_name
 ```
@@ -50,7 +50,7 @@ setup:
   - `git submodule init`: to initialize your local configuration file (sets `submodule.$name.url` in `.git/config`).
   - `git submodule update`: to fetch all the data from that project and check out the appropriate commit listed in your superproject
   - `git —update remote submodule_name`: Git will go into the submodule with the name provided and fetch and update for you.
-    -     `git —update remote`: Git will go into all your submodules and fetch and update for you.
+    - `git —update remote`: Git will go into all your submodules and fetch and update for you.
 
 ## references
 
