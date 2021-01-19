@@ -1,0 +1,7 @@
+<ul>
+  {%- for tag, posts in collections %}
+  <span class="badge bg-secondary bg-gradient">
+    {{ tag }} ( {{ posts | length }} )
+  </span>
+  {%- endfor %}
+</ul>
