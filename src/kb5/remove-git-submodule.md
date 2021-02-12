@@ -17,7 +17,7 @@ contact: ICTS - FII-wmsdev
   - `git clone $your_repo_git_url`
 - edit the `.gitmodules` file: update the url to the new git url of the submodule:
 
-```cfg
+```bash
 [submodule “$submodule_name”]
         path = common_buildout
         url = $new_git_url_of_submodule
@@ -38,7 +38,7 @@ contact: ICTS - FII-wmsdev
 
 - Makefile:
 
-```make
+```makefile
 setup:
         git submodule update --init --remote $submodule_name
 ```
